@@ -5,77 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jargavi Jadeja | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ================= HERO ================= -->
 <header class="hero">
-    <img src="profile.jpg" alt="Jargavi Jadeja" class="profile-img">
-    <h1>Jargavi Jadeja</h1>
-    <h2>Computer Engineering Student | Android & Web Developer</h2>
-    <p class="hero-text">
-        Building reliable Android applications and scalable web solutions with a strong academic foundation.
-    </p>
+    <div class="hero-content">
+        <h1>Hi, I’m <span>Jargavi Jadeja</span></h1>
+        <h2>Computer Engineering Student & Developer</h2>
+        <p>
+            I build reliable Android applications and scalable web solutions
+            with a strong academic foundation and hands-on project experience.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#" class="btn secondary">Resume</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="profile.jpg" alt="Jargavi Jadeja">
+    </div>
 </header>
 
 <main class="container">
 
-    <!-- ABOUT -->
+    <!-- ================= ABOUT ================= -->
     <section class="section">
         <h3>About Me</h3>
         <p>
-            I am a Computer Engineering student with hands-on experience in Android app development
-            and full-stack web development. I enjoy building practical, user-focused applications
-            and continuously strengthening my technical expertise through real-world projects and internships.
+            I am a Computer Engineering student with hands-on experience in Android
+            app development and full-stack web development. I enjoy building
+            practical, user-focused applications and continuously improving my
+            technical skills through real-world projects.
         </p>
     </section>
 
-    <!-- SKILLS -->
+    <!-- ================= SKILLS ================= -->
     <section class="section">
         <h3>Skills</h3>
         <div class="skills-grid">
-            <div>
-                <h4>Programming Languages</h4>
+            <div class="card">
+                <h4>Programming</h4>
                 <p>C, Java, C#, Kotlin, Python (Basic)</p>
             </div>
-            <div>
+            <div class="card">
                 <h4>Web Development</h4>
                 <p>HTML, CSS, JavaScript, React.js, Node.js, ASP.NET MVC</p>
             </div>
-            <div>
+            <div class="card">
                 <h4>Databases</h4>
                 <p>MySQL, MongoDB, SQL</p>
             </div>
-            <div>
-                <h4>Mobile Development</h4>
+            <div class="card">
+                <h4>Mobile</h4>
                 <p>Android Studio, Kotlin</p>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- ================= EXPERIENCE ================= -->
     <section class="section">
         <h3>Experience</h3>
         <div class="project">
             <h4>Web Development Intern – BrainyBeam Info-Tech Pvt. Ltd.</h4>
             <p>
-                Completed a 30-day internship focused on full-stack web development using the MERN stack.
-                Worked on building responsive UI components, backend APIs, and database integration.
+                Completed a 30-day internship focused on full-stack web development
+                using the MERN stack. Worked on responsive UI, backend APIs,
+                and database integration.
             </p>
             <span>MERN Stack • Web Development</span>
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="section">
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
         <h3>Projects</h3>
 
         <div class="project">
             <h4>CalcMate – Offline All-in-One Calculator</h4>
             <p>
-                Developed an offline Android calculator application using Kotlin and Android Studio,
-                focusing on performance, accuracy, and clean UI.
+                Developed an offline Android calculator application using Kotlin
+                with focus on accuracy, performance, and clean UI.
             </p>
             <span>Kotlin • Android Studio</span>
         </div>
@@ -83,16 +100,16 @@
         <div class="project">
             <h4>SchoolSync – School Management System</h4>
             <p>
-                Built a comprehensive school management website using ASP.NET MVC and C#
-                to manage student and administrative data with an SQL database.
+                Built a school management website using ASP.NET MVC and C#
+                to manage student and administrative data.
             </p>
             <span>ASP.NET MVC • C# • SQL</span>
         </div>
 
         <div class="project">
-            <h4>Library Management System (MERN Stack)</h4>
+            <h4>Library Management System</h4>
             <p>
-                Designed and developed a responsive library management system with book tracking,
+                Designed a MERN stack library system with book tracking,
                 user management, and database integration.
             </p>
             <span>React.js • Node.js • Express.js • MongoDB</span>
@@ -101,14 +118,14 @@
         <div class="project">
             <h4>Online Grocery Store</h4>
             <p>
-                Created a responsive online grocery store website with product listings
-                and interactive UI using core web technologies.
+                Created a responsive grocery store website with product listings
+                and interactive UI.
             </p>
             <span>HTML • CSS • JavaScript</span>
         </div>
     </section>
 
-    <!-- EDUCATION -->
+    <!-- ================= EDUCATION ================= -->
     <section class="section">
         <h3>Education</h3>
         <p>
@@ -122,26 +139,24 @@
         </p>
     </section>
 
-    <!-- ACHIEVEMENTS -->
+    <!-- ================= ACHIEVEMENTS ================= -->
     <section class="section">
         <h3>Achievements & Certifications</h3>
         <ul>
-            <li>Explore Machine Learning using Python – Infosys Springboard</li>
-            <li>Database and SQL – Infosys Springboard</li>
             <li>CCNA Certifications – Cisco Networking Academy</li>
-            <li>Hackathon & Technical Event Participation (Coding Ninjas, MU Fest, Web Nexus)</li>
-            <li>Volunteer – MU Fest 2025 (Non-Technical Events)</li>
-            <li>Secured 2nd Rank in Art Exhibition</li>
+            <li>Database and SQL – Infosys Springboard</li>
+            <li>Explore Machine Learning using Python – Infosys Springboard</li>
+            <li>Volunteer – MU Fest 2025</li>
+            <li>2nd Rank – Art Exhibition</li>
         </ul>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ================= CONTACT ================= -->
     <section class="section contact">
         <h3>Contact</h3>
         <p>Email: <a href="mailto:jargavijadeja333@gmail.com">jargavijadeja333@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/JargaviJadeja" target="_blank">github.com/JargaviJadeja</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jargavi-jadeja-150b09292" target="_blank">
-            linkedin.com/in/jargavi-jadeja</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/jargavi-jadeja-150b09292" target="_blank">linkedin.com/in/jargavi-jadeja</a></p>
     </section>
 
 </main>
@@ -152,5 +167,3 @@
 
 </body>
 </html>
-
-
