@@ -4,141 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jargavi Jadeja | Portfolio</title>
-
-  <link rel="stylesheet" href="./style.css">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body class="light">
-
-  <!-- Stars background -->
+  <!-- Floating stars -->
   <div class="stars"></div>
 
-  <!-- HEADER -->
+  <!-- Header -->
   <header class="header">
-    <div class="logo">Jargavi</div>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <button id="themeToggle" class="theme-toggle">
-      <i class="fas fa-moon"></i>
+    <h1 class="logo">Jargavi.</h1>
+    <button id="themeToggle" aria-label="Toggle theme">
+      🌙
     </button>
   </header>
 
-  <!-- HERO -->
-  <section class="hero reveal">
-    <h1>Hi, I'm <span>Jargavi Jadeja</span></h1>
-    <p>Computer Engineering student building modern Android apps and web experiences.</p>
-
-    <div class="hero-buttons">
-      <a href="#projects" class="btn primary">View Work</a>
-      <a href="#contact" class="btn outline">Contact Me</a>
-    </div>
-
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <i class="fas fa-arrow-down"></i>
-    </div>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Hi, I’m <span>Jargavi Jadeja</span></h2>
+    <p>
+      Computer Engineering Student • Full-Stack & Android Developer  
+    </p>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section reveal">
-    <h2>About Me</h2>
-
-    <div class="glass-grid">
+  <!-- About -->
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <div class="glass-cards">
       <div class="glass-card">
-        <h3>Who I Am</h3>
-        <p>
-          A passionate Computer Engineering student focused on building scalable,
-          clean and user-centric applications.
-        </p>
+        3rd-year B.Tech Computer Engineering student with strong interest in
+        Full-Stack Web and Android App Development.
       </div>
-
       <div class="glass-card">
-        <h3>What I Do</h3>
-        <p>
-          Android development with Kotlin, MERN stack projects,
-          and strong fundamentals in software engineering.
-        </p>
+        Experienced with MERN stack, ASP.NET, Kotlin, MongoDB and modern UI design.
       </div>
-
       <div class="glass-card">
-        <h3>My Goal</h3>
-        <p>
-          To grow as a full-stack developer and create impactful digital products.
-        </p>
+        CGPA: 9.22 • Aim: 10 SGPA • Passion for clean UI & meaningful projects.
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section reveal">
-    <h2>Skills</h2>
-
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h3>Skills</h3>
     <div class="skills-grid">
-      <div class="skill"><i class="fab fa-java"></i><span>Java</span></div>
-      <div class="skill"><i class="fab fa-js"></i><span>JavaScript</span></div>
-      <div class="skill"><i class="fab fa-react"></i><span>React</span></div>
-      <div class="skill"><i class="fab fa-android"></i><span>Android</span></div>
-      <div class="skill"><i class="fas fa-database"></i><span>MongoDB</span></div>
-      <div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
-      <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Kotlin</div>
+      <div class="skill">ASP.NET</div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section reveal">
-    <h2>Projects</h2>
-
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h3>Projects</h3>
     <div class="projects-grid">
 
       <div class="project-card">
-        <h3>CalcMate</h3>
-        <p>All-in-one Android calculator app built with Kotlin.</p>
-        <a href="#" class="github-link">
-          <i class="fab fa-github"></i>
-        </a>
+        <h4>CalcMate</h4>
+        <p>Android calculator app with modern UI.</p>
+        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
       </div>
 
       <div class="project-card">
-        <h3>Library Management System</h3>
-        <p>MERN stack project for managing books and users.</p>
-        <a href="#" class="github-link">
-          <i class="fab fa-github"></i>
-        </a>
+        <h4>Library Management System</h4>
+        <p>MERN stack project for university.</p>
+        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
       </div>
 
       <div class="project-card">
-        <h3>Home Inventory App</h3>
-        <p>Web app for tracking household items and warranties.</p>
-        <a href="#" class="github-link">
-          <i class="fab fa-github"></i>
-        </a>
+        <h4>SchoolSync</h4>
+        <p>ASP.NET based school management system.</p>
+        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contact" class="footer reveal">
-    <h2>Get In Touch</h2>
-
-    <div class="socials">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-
+  <!-- Footer -->
+  <footer class="footer">
     <p>© 2025 Jargavi Jadeja</p>
+    <div class="socials">
+      <a href="https://github.com/jargavijadeja" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
   </footer>
 
-  <script src="./script.js"></script>
+  <script>
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+
+      // icon logic FIXED
+      toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+
 </body>
 </html>
