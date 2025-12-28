@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jargavi Jadeja | Portfolio</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body> 
+<body>
 
-<!-- ================= HERO ================= -->
-<header class="hero">
-    <div class="hero-content">
+<!-- ========== HERO ========== -->
+<section class="hero">
+    <div class="hero-inner">
         <h1>Hi, I’m <span>Jargavi Jadeja</span></h1>
         <h2>Computer Engineering Student & Developer</h2>
         <p>
@@ -23,136 +23,90 @@
             with a strong academic foundation and hands-on project experience.
         </p>
 
-        <div class="hero-buttons">
+        <div class="hero-actions">
             <a href="#projects" class="btn primary">View Projects</a>
-            <a href="#" class="btn secondary">Resume</a>
+            <a href="#contact" class="btn outline">Contact</a>
         </div>
     </div>
+</section>
 
-    <div class="hero-image">
-        <img src="profile.jpg" alt="Jargavi Jadeja">
-    </div>
-</header>
-
+<!-- ========== CONTENT ========== -->
 <main class="container">
 
-    <!-- ================= ABOUT ================= -->
     <section class="section">
-        <h3>About Me</h3>
+        <h3>About</h3>
         <p>
             I am a Computer Engineering student with hands-on experience in Android
-            app development and full-stack web development. I enjoy building
-            practical, user-focused applications and continuously improving my
-            technical skills through real-world projects.
+            app development and full-stack web development. I enjoy building clean,
+            user-focused applications and learning through real-world projects.
         </p>
     </section>
 
-    <!-- ================= SKILLS ================= -->
     <section class="section">
         <h3>Skills</h3>
-        <div class="skills-grid">
-            <div class="card">
-                <h4>Programming</h4>
-                <p>C, Java, C#, Kotlin, Python (Basic)</p>
-            </div>
-            <div class="card">
-                <h4>Web Development</h4>
-                <p>HTML, CSS, JavaScript, React.js, Node.js, ASP.NET MVC</p>
-            </div>
-            <div class="card">
-                <h4>Databases</h4>
-                <p>MySQL, MongoDB, SQL</p>
-            </div>
-            <div class="card">
-                <h4>Mobile</h4>
-                <p>Android Studio, Kotlin</p>
-            </div>
+        <div class="grid">
+            <div class="card">C, Java, C#, Kotlin, Python (Basic)</div>
+            <div class="card">HTML, CSS, JavaScript, React, Node.js</div>
+            <div class="card">ASP.NET MVC, SQL, MongoDB</div>
+            <div class="card">Android Studio, Kotlin</div>
         </div>
     </section>
 
-    <!-- ================= EXPERIENCE ================= -->
     <section class="section">
         <h3>Experience</h3>
-        <div class="project">
-            <h4>Web Development Intern – BrainyBeam Info-Tech Pvt. Ltd.</h4>
+        <div class="card">
+            <strong>Web Development Intern – BrainyBeam Info-Tech Pvt. Ltd.</strong>
             <p>
-                Completed a 30-day internship focused on full-stack web development
-                using the MERN stack. Worked on responsive UI, backend APIs,
-                and database integration.
+                30-day internship focused on MERN stack development,
+                responsive UI, backend APIs, and database integration.
             </p>
-            <span>MERN Stack • Web Development</span>
         </div>
     </section>
 
-    <!-- ================= PROJECTS ================= -->
     <section class="section" id="projects">
         <h3>Projects</h3>
 
-        <div class="project">
-            <h4>CalcMate – Offline All-in-One Calculator</h4>
-            <p>
-                Developed an offline Android calculator application using Kotlin
-                with focus on accuracy, performance, and clean UI.
-            </p>
-            <span>Kotlin • Android Studio</span>
+        <div class="card">
+            <strong>CalcMate – Offline Calculator</strong>
+            <p>Android calculator app built using Kotlin.</p>
         </div>
 
-        <div class="project">
-            <h4>SchoolSync – School Management System</h4>
-            <p>
-                Built a school management website using ASP.NET MVC and C#
-                to manage student and administrative data.
-            </p>
-            <span>ASP.NET MVC • C# • SQL</span>
+        <div class="card">
+            <strong>SchoolSync – School Management System</strong>
+            <p>ASP.NET MVC application for managing student data.</p>
         </div>
 
-        <div class="project">
-            <h4>Library Management System</h4>
-            <p>
-                Designed a MERN stack library system with book tracking,
-                user management, and database integration.
-            </p>
-            <span>React.js • Node.js • Express.js • MongoDB</span>
+        <div class="card">
+            <strong>Library Management System</strong>
+            <p>MERN stack project with book and user management.</p>
         </div>
 
-        <div class="project">
-            <h4>Online Grocery Store</h4>
-            <p>
-                Created a responsive grocery store website with product listings
-                and interactive UI.
-            </p>
-            <span>HTML • CSS • JavaScript</span>
+        <div class="card">
+            <strong>Online Grocery Store</strong>
+            <p>Responsive website built using HTML, CSS, JavaScript.</p>
         </div>
     </section>
 
-    <!-- ================= EDUCATION ================= -->
     <section class="section">
         <h3>Education</h3>
         <p>
-            <strong>B.Tech in Computer Engineering</strong><br>
-            Marwadi University, Rajkot<br>
+            <strong>B.Tech in Computer Engineering</strong><br />
+            Marwadi University, Rajkot<br />
             CGPA: <strong>9.22</strong>
-        </p>
-        <p class="school">
-            Class 10 (GSEB): <strong>99.32 PR</strong> |
-            Class 12 Science (PCM, GSEB): <strong>75 PR</strong>
         </p>
     </section>
 
-    <!-- ================= ACHIEVEMENTS ================= -->
     <section class="section">
-        <h3>Achievements & Certifications</h3>
+        <h3>Achievements</h3>
         <ul>
-            <li>CCNA Certifications – Cisco Networking Academy</li>
-            <li>Database and SQL – Infosys Springboard</li>
-            <li>Explore Machine Learning using Python – Infosys Springboard</li>
+            <li>CCNA – Cisco Networking Academy</li>
+            <li>Infosys Springboard Certifications</li>
             <li>Volunteer – MU Fest 2025</li>
             <li>2nd Rank – Art Exhibition</li>
         </ul>
     </section>
 
-    <!-- ================= CONTACT ================= -->
-    <section class="section contact">
+    <section class="section" id="contact">
         <h3>Contact</h3>
         <p>Email: <a href="mailto:jargavijadeja333@gmail.com">jargavijadeja333@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/JargaviJadeja" target="_blank">github.com/JargaviJadeja</a></p>
