@@ -1,38 +1,335 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jargavi Jadeja | Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jargavi Jadeja | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="light">
-    <canvas id="particleCanvas"></canvas>
 
-    <nav class="navbar">
-        <div class="logo">Jargavi's portfolio</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <button id="themeToggle" class="theme-btn">🌙</button>
-        </div>
+  <canvas id="particleCanvas"></canvas>
+
+  <header class="header">
+    <!-- <div class="logo">Jargavi's <span>portfolio</span></div> -->
+     <div class="logo header-logo">Jargavi<span>.dev</span></div>
+    <nav class="nav-container">
+      <div class="nav-links">
+        <a href="#home">Home&nbsp;&nbsp;</a>
+        <a href="#about">About&nbsp;&nbsp;</a>
+        <a href="#skills">Skills&nbsp;&nbsp;</a>
+        <a href="#projects">Projects&nbsp;&nbsp;</a>
+        <a href="#contact-section">Contact&nbsp;&nbsp;</a>
+      </div>
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
     </nav>
+</header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Jargavi Jadeja</span></h1>
-            <p>A computer engineering student with a strong foundation in programming and development. Skilled in C, C++, JavaScript, and TypeScript, with hands-on experience in building websites using the MERN stack.</p>
-            <button class="btn-primary">View My Work</button>
-        </div>
-        <div class="scroll-down">
-            <span>Scroll</span>
-            <div class="arrow">↓</div>
-        </div>
-    </section>
+  <section id="home" class="hero">
+    <div class="hero-content">
+        
+        <h2>Hi, I'm <span>Jargavi&nbsp;</span>Jadeja</h2>
+        <p>A Computer Engineering student with strong interest in Full-Stack Web and Android App Development.</p>
+        <div class="hero-btns">
+    <a href="#projects" class="btn-primary">View My Work</a>
+</div>
+       <div class="scroll-indicator">
+    Scroll <span class="jumping-arrow">↓</span>
+</div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="about" class="section">
+    <h2 class="section-title" style="font-size: 40px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About <span>Me</span></h2>
+    <div class="about-container">
+        <div class="about-text">
+            <h3>passionate Developer and tech creator</h3>
+            <p>I thrive at the intersection of design and technology, crafting solutions that are both innovative and user-centric. Whether it's coding functional applications or designing seamless interfaces, I enjoy turning ideas into interactive realities that make an impact.</p>
+            
+            <div class="edu-details">
+                <p><strong>Pursuing:</strong> B.Tech in Computer Engineering from Marwadi University.</p>
+            </div>
+
+            <div class="about-btns">
+                <a href="#contact-section" class="btn-primary">Get In Touch</a>
+                <a href="Updated_Resume_Jargavi_Jadeja.pdf" class="btn-outline">Download Resume</a>
+            </div>
+        </div>
+
+        <div class="about-cards">
+            <div class="glass-card about-card">
+                <div class="card-icon">💻</div>
+                <div class="card-info">
+                    <h4>Web Development</h4>
+                    <p>I enjoy building responsive, user-friendly web applications. Skilled in HTML, CSS, JavaScript, and MERN stack.</p>
+                </div>
+            </div>
+
+            <div class="glass-card about-card">
+                <div class="card-icon">📱</div>
+                <div class="card-info">
+                    <h4>App Development</h4>
+                    <p>Experienced in creating modern Android applications using Kotlin and modern UI principles.</p>
+                </div>
+            </div>
+
+            <div class="glass-card about-card">
+                <div class="card-icon">🛠️</div>
+                <div class="card-info">
+                    <h4>Tools Used</h4>
+                    <p>I use Git, VS Code, and modern design tools to support my development and design work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <section id="skills" class="section">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+    </div>
+
+    <div class="skills-grid">
+        <div class="skill-card" data-category="frontend">
+            <div class="skill-info">
+                <span class="skill-name">html/css</span>
+                <span class="skill-percentage">100%</span>
+            </div>
+            <div class="progress-line"><span style="width: 100%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="frontend">
+            <div class="skill-info">
+                <span class="skill-name">javascript</span>
+                <span class="skill-percentage">100%</span>
+            </div>
+            <div class="progress-line"><span style="width: 100%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="frontend">
+            <div class="skill-info">
+                <span class="skill-name">react</span>
+                <span class="skill-percentage">95%</span>
+            </div>
+            <div class="progress-line"><span style="width: 95%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="backend">
+            <div class="skill-info">
+                <span class="skill-name">kotlin</span>
+                <span class="skill-percentage">95%</span>
+            </div>
+            <div class="progress-line"><span style="width: 95%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="backend">
+            <div class="skill-info">
+                <span class="skill-name">asp.net</span>
+                <span class="skill-percentage">90%</span>
+            </div>
+            <div class="progress-line"><span style="width: 90%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="backend">
+            <div class="skill-info">
+                <span class="skill-name">node.js</span>
+                <span class="skill-percentage">85%</span>
+            </div>
+            <div class="progress-line"><span style="width: 85%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="backend">
+            <div class="skill-info">
+                <span class="skill-name">mongodb</span>
+                <span class="skill-percentage">90%</span>
+            </div>
+            <div class="progress-line"><span style="width: 90%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="tools">
+            <div class="skill-info">
+                <span class="skill-name">android studio</span>
+                <span class="skill-percentage">95%</span>
+            </div>
+            <div class="progress-line"><span style="width: 95%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="tools">
+            <div class="skill-info">
+                <span class="skill-name">visual studio</span>
+                <span class="skill-percentage">95%</span>
+            </div>
+            <div class="progress-line"><span style="width: 95%;"></span></div>
+        </div>
+
+        <div class="skill-card" data-category="tools">
+            <div class="skill-info">
+                <span class="skill-name">vs code</span>
+                <span class="skill-percentage">95%</span>
+            </div>
+            <div class="progress-line"><span style="width: 95%;"></span></div>
+        </div>
+    </div>
+</section>
+
+  <section id="projects" class="section">
+  <h3>Featured Projects</h3>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="dashboard1.png" alt="Portfolio Dashboard" class="project-img">
+      </div>
+      <div class="project-info">
+        <h4>Portfolio Dashboard</h4>
+        <p>Personal portfolio website built with HTML, CSS, and JS.</p>
+        <a href="https://github.com/JargaviJadeja/jargavijadeja.github.io" target="_blank">View Code ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="calcmate.png" alt="CalcMate App" class="project-img">
+      </div>
+      <div class="project-info">
+        <h4>CalcMate(Availabele on Google PlayStore)</h4>
+       <p>
+  All-in-one Calculator Android app available on Play Store. 🔗 
+  <a href="https://play.google.com/store/apps/details?id=com.marwadiuniversity.calcmate_new" 
+     target="_blank">
+    Try it on Play Store ↗
+  </a>
+</p>
+
+<a href="https://github.com/JargaviJadeja/CalcMate_All_in_one_Calculator_app_Google_playstore_android_app" 
+   target="_blank">
+   View Code ↗
+</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="grocery.png" alt="Online Grocery Store" class="project-img">
+      </div>
+      <div class="project-info">
+        <h4>Online Grocery Store</h4>
+        <p>E-commerce platform using HTML, CSS, and JS.</p>
+        <a href="https://github.com/JargaviJadeja/Online_Grocery_Store-Html-Css-Js" target="_blank">View Code ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="schoolsync.png" alt="SchoolSync Dashboard" class="project-img">
+      </div>
+      <div class="project-info">
+        <h4>SchoolSync</h4>
+        <p>Management platform for educational institutions.</p>
+        <a href="https://github.com/JargaviJadeja/DNT_CSE_SchoolSync_Project" target="_blank">View Code ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="library.png" alt="LMS Dashboard" class="project-img">
+      </div>
+      <div class="project-info">
+        <h4>BookBase - Library Management System (MERN)</h4>
+        <p>Library Management System built using the MERN stack.</p>
+        <a href="https://github.com/JargaviJadeja/Library-Management-System-using-MERN-Stack-" target="_blank">View Code ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="stationery.jpeg" alt="Stationery Store" class="project-img">
+      </div>
+      <div class="project-info">
+        <h4>Stationery Store</h4>
+        <p>Web store for stationery supplies using front-end tech.</p>
+        <a href="https://github.com/JargaviJadeja/Online-Stationory-Store" target="_blank">View Code ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="contact-section" class="ct-wrapper">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    
+    <div class="ct-main-container">
+        <div class="ct-details-column">
+            <h3 class="ct-heading">Let's collaborate</h3>
+            <p class="ct-description">“I’d love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say hello — feel free to reach out.”</p>
+            
+            <div class="ct-info-stack">
+                <div class="ct-info-card">
+                    <div class="ct-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="ct-text-content">
+                        <span class="ct-label">Email</span>
+                        <p class="ct-value">jargavijadeja333@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="ct-info-card">
+                    <div class="ct-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="ct-text-content">
+                        <span class="ct-label">Availability</span>
+                        <p class="ct-value">Mon – Fri: 1:30 PM – 9:00 PM | Sat – Sun: All Day</p>
+                    </div>
+                </div>
+
+                <div class="ct-info-card">
+                    <div class="ct-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="ct-text-content">
+                        <span class="ct-label">Location</span>
+                        <p class="ct-value">Rajkot, Gujarat, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ct-form-column">
+            <form action="https://formspree.io/f/xgoezyob" method="POST" class="ct-form-block">
+                <div class="ct-input-group">
+                    <input type="text" name="name" class="ct-input-field" placeholder="Your Name" required>
+                </div>
+
+                <div class="ct-input-group">
+                    <input type="email" name="email" class="ct-input-field" placeholder="Your Email" required>
+                </div>
+
+                <div class="ct-input-group">
+                    <textarea name="message" class="ct-input-field ct-textarea" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="New Portfolio Message!">
+                <button type="submit" class="ct-submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+  <footer class="footer">
+    <p>© 2025 Jargavi Jadeja</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
