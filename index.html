@@ -4,107 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jargavi Jadeja | Portfolio</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light">
+  <canvas id="particleCanvas"></canvas>
 
-  <!-- Floating stars -->
-  <div class="stars"></div>
+  <nav class="navbar">
+    <div class="logo">Jargavi's portfolio</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </nav>
 
-  <!-- Header -->
-  <header class="header">
-    <h1 class="logo">Jargavi.</h1>
-    <button id="themeToggle" aria-label="Toggle theme">
-      🌙
-    </button>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Hi, I’m <span>Jargavi Jadeja</span></h2>
-    <p>
-      Computer Engineering Student • Full-Stack & Android Developer  
-    </p>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Jargavi Jadeja</span></h1>
+      <p>A computer engineering student with a strong foundation in programming and development. Skilled in MERN stack, ASP.NET, and Android development.</p>
+      <button class="btn-primary">View My Work</button>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="arrow">↓</div>
+    </div>
   </section>
 
-  <!-- About -->
   <section id="about" class="section">
-    <h3>About Me</h3>
-    <div class="glass-cards">
-      <div class="glass-card">
-        3rd-year B.Tech Computer Engineering student with strong interest in
-        Full-Stack Web and Android App Development.
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <h3>passionate Developer and tech creator</h3>
+        <p>I thrive at the intersection of design and technology, crafting solutions that are both innovative and user-centric.</p>
+        <div class="edu-info">
+          <p><strong>Pursuing:</strong> B.Tech in Computer Engineering</p>
+          <p><strong>Current CGPA:</strong> 9.22</p>
+        </div>
+        <div class="cta-group">
+          <button class="btn-outline">Get In Touch</button>
+          <button class="btn-outline">Download Resume</button>
+        </div>
       </div>
-      <div class="glass-card">
-        Experienced with MERN stack, ASP.NET, Kotlin, MongoDB and modern UI design.
-      </div>
-      <div class="glass-card">
-        CGPA: 9.22 • Aim: 10 SGPA • Passion for clean UI & meaningful projects.
+      <div class="about-cards">
+        <div class="info-card">
+          <div class="icon">💻</div>
+          <h4>Web Development</h4>
+          <p>Building responsive, user-friendly applications using MERN stack.</p>
+        </div>
+        <div class="info-card">
+          <div class="icon">📱</div>
+          <h4>App Development</h4>
+          <p>Creating modern Android applications using Kotlin.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills" class="section">
-    <h3>Skills</h3>
+    <h2 class="section-title">My Skills</h2>
+    <div class="skill-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+    </div>
     <div class="skills-grid">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">React</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">MongoDB</div>
-      <div class="skill">Kotlin</div>
-      <div class="skill">ASP.NET</div>
-    </div>
+      <div class="skill-item frontend">
+        <div class="skill-info"><span>React</span><span>95%</span></div>
+        <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+      </div>
+      <div class="skill-item backend">
+        <div class="skill-info"><span>Node.js</span><span>90%</span></div>
+        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+      </div>
+      </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="section">
-    <h3>Projects</h3>
+    <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
-
       <div class="project-card">
-        <h4>CalcMate</h4>
-        <p>Android calculator app with modern UI.</p>
-        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
+        <div class="project-img"></div>
+        <div class="project-tags"><span>React</span><span>Node</span></div>
+        <h4>Library Management</h4>
+        <p>Full-stack MERN application for university resources.</p>
+        <div class="project-links">
+          <a href="#">🔗</a><a href="#">🐙</a>
+        </div>
       </div>
-
-      <div class="project-card">
-        <h4>Library Management System</h4>
-        <p>MERN stack project for university.</p>
-        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
       </div>
-
-      <div class="project-card">
-        <h4>SchoolSync</h4>
-        <p>ASP.NET based school management system.</p>
-        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
-      </div>
-
+    <div class="center-btn">
+      <button class="btn-primary">Check my github →</button>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Jargavi Jadeja</p>
-    <div class="socials">
-      <a href="https://github.com/jargavijadeja" target="_blank">GitHub</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-    </div>
+    <p>© 2025 Jargavi.co All rights reserved.</p>
   </footer>
 
-  <script>
-    const toggleBtn = document.getElementById("themeToggle");
-    const body = document.body;
-
-    toggleBtn.addEventListener("click", () => {
-      body.classList.toggle("dark");
-
-      // icon logic FIXED
-      toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
