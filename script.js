@@ -1,66 +1,75 @@
-const themeToggle = document.getElementById('themeToggle');
+const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
-const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("particleCanvas");
+const ctx = canvas.getContext("2d");
 
-// Theme Switcher
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    body.classList.toggle('light');
-    themeToggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+// 1. Theme Toggle
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// Simple Particle System for Dark Mode
+// 2. Particle System
 let particles = [];
-function initParticles() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particles = [];
-    for(let i = 0; i < 100; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            size: Math.random() * 2,
-            speed: Math.random() * 0.5
-        });
-    }
+const particleCount = 150; // Increased number
+
+function init() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  particles = [];
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 3 + 1, // Increased size
+      speed: Math.random() * 0.5 + 0.2,
+      opacity: Math.random()
+    });
+  }
 }
 
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if(body.classList.contains('dark')) {
-        ctx.fillStyle = 'white';
-        particles.forEach(p => {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fill();
-            p.y -= p.speed;
-            if(p.y < 0) p.y = canvas.height;
-        });
-    }
-    requestAnimationFrame(animate);
-}
 
-window.addEventListener('resize', initParticles);
-initParticles();
-animate();
+const filterButtons = document.querySelectorAll('.filter-btn');
+const skillCards = document.querySelectorAll('.skill-card');
 
-// Filter Logic
-const filterBtns = document.querySelectorAll('.filter-btn');
-const skillItems = document.querySelectorAll('.skill-item');
-
-filterBtns.forEach(btn => {
+filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
+        // Update active button
+        document.querySelector('.filter-btn.active').classList.remove('active');
         btn.classList.add('active');
-        const filter = btn.getAttribute('data-filter');
-        
-        skillItems.forEach(item => {
-            if(filter === 'all' || item.classList.contains(filter)) {
-                item.style.display = 'block';
+
+        // Filter cards
+        const filterValue = btn.getAttribute('data-filter');
+        skillCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                card.style.display = 'block';
             } else {
-                item.style.display = 'none';
+                card.style.display = 'none';
             }
         });
     });
 });
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Only draw particles in dark mode
+  if (body.classList.contains("dark")) {
+    ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+    particles.forEach((p) => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Move particles up
+      p.y -= p.speed;
+      if (p.y < 0) p.y = canvas.height;
+    });
+  }
+  
+  requestAnimationFrame(animate);
+}
+
+window.addEventListener("resize", init);
+init();
+animate();
