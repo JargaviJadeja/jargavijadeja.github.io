@@ -1,231 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-:root {
-  --accent: #7c5cff;
-  --bg-light: #f7f8fc;
-  --bg-dark: #0b0b14;
-  --text-light: #111;
-  --text-dark: #fff;
-  --glass: rgba(255,255,255,0.12);
-}
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  background: var(--bg-light);
-  color: var(--text-light);
-  transition: background 0.4s, color 0.4s;
+  background: linear-gradient(120deg, #f6f7fb, #eaeaf1);
+  color: #111;
+  min-height: 100vh;
   overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
+/* DARK MODE */
 body.dark {
-  background: radial-gradient(circle at top, #151528, #05050b);
-  color: var(--text-dark);
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: #e5e7eb;
 }
 
-/* 🌌 FLOATING PARTICLES */
-body.dark::before {
-  content: "";
+/* STARS */
+.stars {
   position: fixed;
   inset: 0;
+  pointer-events: none;
   background-image:
-    radial-gradient(2px 2px at 20% 30%, #ffffffaa 50%, transparent 51%),
-    radial-gradient(1.5px 1.5px at 70% 40%, #ffffff88 50%, transparent 51%),
-    radial-gradient(1px 1px at 50% 80%, #ffffff66 50%, transparent 51%),
-    radial-gradient(2px 2px at 90% 20%, #ffffff99 50%, transparent 51%);
-  animation: floatStars 40s linear infinite;
-  z-index: -1;
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 80% 40%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 50% 70%, rgba(255,255,255,0.3), transparent);
+  animation: floatStars 12s linear infinite;
+  opacity: 0;
+}
+
+body.dark .stars {
+  opacity: 1;
 }
 
 @keyframes floatStars {
   from { transform: translateY(0); }
-  to { transform: translateY(-1000px); }
+  to { transform: translateY(-200px); }
 }
 
 /* HEADER */
 .header {
   position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 60px;
+  top: 20px;
+  left: 30px;
+  right: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(12px);
-  z-index: 100;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
-.header nav {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.header nav a {
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-}
-
-.header nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  left: 0;
-  bottom: -6px;
-  transition: 0.3s;
-}
-
-.header nav a:hover::after {
-  width: 100%;
-}
-
-.theme-toggle {
-  margin-left: 30px;
+#themeToggle {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 1.4rem;
   cursor: pointer;
-  color: inherit;
 }
 
 /* HERO */
 .hero {
   min-height: 100vh;
-  padding-top: 160px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
 }
 
-.hero h1 {
-  font-size: 4.2rem;
-  font-weight: 700;
+.hero h2 {
+  font-size: 3rem;
 }
 
-.hero h1 span {
-  color: var(--accent);
+.hero span {
+  color: #6366f1;
 }
 
 .hero p {
-  margin: 20px auto;
-  max-width: 650px;
+  margin-top: 12px;
+  font-size: 1.1rem;
   opacity: 0.85;
-}
-
-.hero-buttons {
-  margin-top: 35px;
-}
-
-.btn {
-  padding: 14px 34px;
-  border-radius: 30px;
-  margin: 10px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.primary {
-  background: var(--accent);
-  color: #fff;
-}
-
-.outline {
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-.scroll-indicator {
-  margin-top: 70px;
-  opacity: 0.7;
-  animation: bounce 1.6s infinite;
-}
-
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
 }
 
 /* SECTIONS */
 .section {
-  padding: 120px 10%;
-  text-align: center;
+  padding: 100px 8%;
 }
 
-.section h2 {
-  font-size: 2.6rem;
-  margin-bottom: 50px;
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
-/* GLASS */
-.glass-grid,
-.skills-grid,
-.projects-grid {
+/* GLASS CARDS */
+.glass-cards {
   display: grid;
-  gap: 30px;
+  gap: 20px;
 }
 
-.glass-grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.glass-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease;
 }
 
-.glass-card,
-.skill,
-.project-card {
-  background: var(--glass);
-  backdrop-filter: blur(14px);
-  padding: 30px;
-  border-radius: 20px;
-  transition: 0.4s;
-}
-
-.glass-card:hover,
-.skill:hover,
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 35px var(--accent);
+.glass-card:hover {
+  transform: translateY(-6px);
 }
 
 /* SKILLS */
 .skills-grid {
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 16px;
 }
 
-.skill i {
-  font-size: 30px;
-  margin-bottom: 10px;
+.skill {
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(99,102,241,0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill:hover {
+  background: #6366f1;
+  color: white;
 }
 
 /* PROJECTS */
 .projects-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 20px;
 }
 
-.github-link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 22px;
-  color: inherit;
+.project-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(99,102,241,0.6);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #6366f1;
+  text-decoration: none;
 }
 
 /* FOOTER */
 .footer {
-  padding: 90px 10%;
+  padding: 40px 8%;
   text-align: center;
+  opacity: 0.7;
 }
 
 .socials a {
-  font-size: 24px;
-  margin: 0 15px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
 }
