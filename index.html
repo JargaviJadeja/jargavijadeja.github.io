@@ -4,101 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jargavi Jadeja | Portfolio</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body> 
+<body>
 
-<!-- particles -->
-<div class="particles"></div>
+  <!-- Floating stars -->
+  <div class="stars"></div>
 
-<!-- header -->
-<header class="header">
-  <div class="logo">Jargavi.</div>
-  <button id="themeToggle">🌙</button>
-</header>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo">Jargavi.</h1>
+    <button id="themeToggle" aria-label="Toggle theme">
+      🌙
+    </button>
+  </header>
 
-<!-- hero -->
-<section class="hero">
-  <h1>Jargavi Jadeja</h1>
-  <p>Computer Engineering Student • Android & Web Developer</p>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Hi, I’m <span>Jargavi Jadeja</span></h2>
+    <p>
+      Computer Engineering Student • Full-Stack & Android Developer  
+    </p>
+  </section>
 
-<!-- about -->
-<section class="section">
-  <h2>About Me</h2>
-  <div class="glass-grid">
-    <div class="glass-card">3rd year B.Tech Computer Engineering student.</div>
-    <div class="glass-card">Strong interest in Full-Stack & Android Development.</div>
-    <div class="glass-card">CGPA 9.22 • Focused on clean UI & performance.</div>
-  </div>
-</section>
- 
-<!-- skills -->
-<section class="section" id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-    <span>React</span><span>Node.js</span><span>MongoDB</span>
-    <span>Kotlin</span><span>ASP.NET</span>
-  </div>
-</section>
-
-<!-- projects -->
-<section class="section">
-  <h2>Projects</h2>
-
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Personal portfolio built with HTML & CSS.</p>
-      <a href="https://github.com/JargaviJadeja/jargavijadeja.github.io" target="_blank">GitHub ↗</a>
+  <!-- About -->
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <div class="glass-cards">
+      <div class="glass-card">
+        3rd-year B.Tech Computer Engineering student with strong interest in
+        Full-Stack Web and Android App Development.
+      </div>
+      <div class="glass-card">
+        Experienced with MERN stack, ASP.NET, Kotlin, MongoDB and modern UI design.
+      </div>
+      <div class="glass-card">
+        CGPA: 9.22 • Aim: 10 SGPA • Passion for clean UI & meaningful projects.
+      </div>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>CalcMate</h3>
-      <p>Offline all-in-one Android calculator app.</p>
-      <a href="https://github.com/JargaviJadeja/CalcMate_All_in_one_Calculator_app_Google_playstore_android_app" target="_blank">GitHub ↗</a>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h3>Skills</h3>
+    <div class="skills-grid">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Kotlin</div>
+      <div class="skill">ASP.NET</div>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>Online Grocery Store</h3>
-      <p>Responsive e-commerce UI using HTML, CSS & JS.</p>
-      <a href="https://github.com/JargaviJadeja/Online_Grocery_Store-Html-Css-Js" target="_blank">GitHub ↗</a>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h3>Projects</h3>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h4>CalcMate</h4>
+        <p>Android calculator app with modern UI.</p>
+        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
+      </div>
+
+      <div class="project-card">
+        <h4>Library Management System</h4>
+        <p>MERN stack project for university.</p>
+        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
+      </div>
+
+      <div class="project-card">
+        <h4>SchoolSync</h4>
+        <p>ASP.NET based school management system.</p>
+        <a href="https://github.com/jargavijadeja" target="_blank">GitHub ↗</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>SchoolSync</h3>
-      <p>Online platform for school management.</p>
-      <a href="https://github.com/JargaviJadeja/DNT_CSE_SchoolSync_Project" target="_blank">GitHub ↗</a>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Jargavi Jadeja</p>
+    <div class="socials">
+      <a href="https://github.com/jargavijadeja" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
     </div>
+  </footer>
 
-    <div class="project-card">
-      <h3>Library Management System</h3>
-      <p>MERN stack project with full CRUD.</p>
-      <a href="https://github.com/JargaviJadeja/Library-Management-System-using-MERN-Stack-" target="_blank">GitHub ↗</a>
-    </div>
+  <script>
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
 
-    <div class="project-card">
-      <h3>Online Stationery Store</h3>
-      <p>Static store using HTML, CSS & JavaScript.</p>
-      <a href="https://github.com/JargaviJadeja/Online-Stationory-Store" target="_blank">GitHub ↗</a>
-    </div>
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
 
-  </div>
-</section>
-
-<footer class="footer">
-  © 2025 Jargavi Jadeja
-</footer>
-
-<script>
-  const toggle = document.getElementById("themeToggle");
-  toggle.onclick = () => {
-    document.body.classList.toggle("dark");
-    toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-  };
-</script>
+      // icon logic FIXED
+      toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
 
 </body>
 </html>
