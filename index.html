@@ -1,103 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Jargavi Jadeja | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jargavi Jadeja | Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<!-- STAR BACKGROUND -->
-<div class="stars"></div>
-<div class="stars2"></div>
-<div class="stars3"></div>
+<body class="dark">
 
-<!-- HEADER -->
-<header class="header">
+  <!-- ⭐ STAR BACKGROUND -->
+  <div class="stars"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
     <div class="logo">Jargavi</div>
-    <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hi, I’m <span>Jargavi Jadeja</span></h1>
-        <p>Computer Engineering student building modern Android apps and web experiences.</p>
+    <!-- TOGGLE -->
+    <div class="theme-toggle" id="themeToggle">🌙</div>
+  </header>
 
-        <div class="hero-buttons">
-            <a href="#projects" class="btn primary">View Work</a>
-            <a href="#contact" class="btn outline">Contact Me</a>
-        </div>
-    </div>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>
+      Hi, I'm <span>Jargavi Jadeja</span>
+    </h1>
 
-    <div class="scroll-indicator">
-        <span></span>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section reveal" id="about">
-    <h2>About Me</h2>
     <p>
-        I am a Computer Engineering student passionate about Android and Web development.
-        I enjoy creating clean, user-focused applications with modern UI and smooth interactions.
+      Computer Engineering student building modern Android apps and web experiences.
     </p>
-</section>
 
-<!-- SKILLS -->
-<section class="section reveal" id="skills">
-    <h2>Skills</h2>
-
-    <div class="cards">
-        <div class="card">Java • Kotlin • C • C#</div>
-        <div class="card">HTML • CSS • JavaScript • React</div>
-        <div class="card">Node.js • Express • MongoDB</div>
-        <div class="card">Android Studio • Git • SQL</div>
+    <div class="buttons">
+      <a href="#projects" class="btn primary">View Work</a>
+      <a href="#contact" class="btn outline">Contact Me</a>
     </div>
-</section>
 
-<!-- PROJECTS -->
-<section class="section reveal" id="projects">
-    <h2>Projects</h2>
+    <div class="scroll">Scroll ↓</div>
+  </section>
 
-    <div class="cards">
-        <div class="card project">
-            <h3>CalcMate</h3>
-            <p>Offline all-in-one calculator app built using Kotlin.</p>
-        </div>
+  <!-- PLACEHOLDER NEXT SECTIONS (SCROLL ENABLED) -->
+  <section id="about" class="section">About Section</section>
+  <section id="skills" class="section">Skills Section</section>
+  <section id="projects" class="section">Projects Section</section>
+  <section id="contact" class="section">Contact Section</section>
 
-        <div class="card project">
-            <h3>SchoolSync</h3>
-            <p>School management system using ASP.NET MVC.</p>
-        </div>
+  <!-- THEME SCRIPT -->
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    const body = document.body;
+    const stars = document.querySelector(".stars");
 
-        <div class="card project">
-            <h3>Library Management System</h3>
-            <p>MERN stack application for managing books and users.</p>
-        </div>
-    </div>
-</section>
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      body.classList.toggle("light");
 
-<!-- CONTACT -->
-<section class="section reveal" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:jargavijadeja333@gmail.com">jargavijadeja333@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/JargaviJadeja" target="_blank">github.com/JargaviJadeja</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/jargavi-jadeja-150b09292" target="_blank">LinkedIn Profile</a></p>
-</section>
+      if (body.classList.contains("dark")) {
+        toggle.textContent = "🌙";
+        stars.style.display = "block";
+      } else {
+        toggle.textContent = "☀️";
+        stars.style.display = "none";
+      }
+    });
+  </script>
 
-<footer>
-    © 2025 Jargavi Jadeja
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
