@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jargavi Jadeja | Portfolio</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css">
 
   <!-- Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 
-<body class="dark">
+<body class="light">
 
-  <!-- ⭐ STAR BACKGROUND -->
+  <!-- Stars background -->
   <div class="stars"></div>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
+  <!-- HEADER -->
+  <header class="header">
     <div class="logo">Jargavi</div>
 
     <nav>
@@ -28,53 +27,118 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <!-- TOGGLE -->
-    <div class="theme-toggle" id="themeToggle">🌙</div>
+    <button id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <h1>
-      Hi, I'm <span>Jargavi Jadeja</span>
-    </h1>
+  <section class="hero reveal">
+    <h1>Hi, I'm <span>Jargavi Jadeja</span></h1>
+    <p>Computer Engineering student building modern Android apps and web experiences.</p>
 
-    <p>
-      Computer Engineering student building modern Android apps and web experiences.
-    </p>
-
-    <div class="buttons">
+    <div class="hero-buttons">
       <a href="#projects" class="btn primary">View Work</a>
       <a href="#contact" class="btn outline">Contact Me</a>
     </div>
 
-    <div class="scroll">Scroll ↓</div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <i class="fas fa-arrow-down"></i>
+    </div>
   </section>
 
-  <!-- PLACEHOLDER NEXT SECTIONS (SCROLL ENABLED) -->
-  <section id="about" class="section">About Section</section>
-  <section id="skills" class="section">Skills Section</section>
-  <section id="projects" class="section">Projects Section</section>
-  <section id="contact" class="section">Contact Section</section>
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <h2>About Me</h2>
 
-  <!-- THEME SCRIPT -->
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    const body = document.body;
-    const stars = document.querySelector(".stars");
+    <div class="glass-grid">
+      <div class="glass-card">
+        <h3>Who I Am</h3>
+        <p>
+          A passionate Computer Engineering student focused on building scalable,
+          clean and user-centric applications.
+        </p>
+      </div>
 
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("dark");
-      body.classList.toggle("light");
+      <div class="glass-card">
+        <h3>What I Do</h3>
+        <p>
+          Android development with Kotlin, MERN stack projects,
+          and strong fundamentals in software engineering.
+        </p>
+      </div>
 
-      if (body.classList.contains("dark")) {
-        toggle.textContent = "🌙";
-        stars.style.display = "block";
-      } else {
-        toggle.textContent = "☀️";
-        stars.style.display = "none";
-      }
-    });
-  </script>
+      <div class="glass-card">
+        <h3>My Goal</h3>
+        <p>
+          To grow as a full-stack developer and create impactful digital products.
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="skill"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill"><i class="fab fa-react"></i><span>React</span></div>
+      <div class="skill"><i class="fab fa-android"></i><span>Android</span></div>
+      <div class="skill"><i class="fas fa-database"></i><span>MongoDB</span></div>
+      <div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
+      <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>CalcMate</h3>
+        <p>All-in-one Android calculator app built with Kotlin.</p>
+        <a href="#" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <h3>Library Management System</h3>
+        <p>MERN stack project for managing books and users.</p>
+        <a href="#" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <h3>Home Inventory App</h3>
+        <p>Web app for tracking household items and warranties.</p>
+        <a href="#" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer reveal">
+    <h2>Get In Touch</h2>
+
+    <div class="socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <p>© 2025 Jargavi Jadeja</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
