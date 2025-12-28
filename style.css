@@ -1,11 +1,9 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
     font-family: 'Inter', sans-serif;
     background: #050510;
@@ -13,199 +11,142 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== STAR BACKGROUND ===== */
+/* STARS */
 .stars, .stars2, .stars3 {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-repeat: repeat;
-    top: 0;
-    left: 0;
     z-index: -1;
-    animation: moveStars 100s linear infinite;
+    animation: moveStars linear infinite;
 }
 
-.stars {
-    background-image: radial-gradient(1px 1px at 20px 30px, #fff, transparent),
-                      radial-gradient(1px 1px at 40px 70px, #fff, transparent),
-                      radial-gradient(1px 1px at 130px 80px, #fff, transparent);
-    opacity: 0.4;
-}
-
-.stars2 {
-    background-image: radial-gradient(1px 1px at 10px 90px, #aaa, transparent),
-                      radial-gradient(1px 1px at 60px 20px, #aaa, transparent);
-    animation-duration: 150s;
-    opacity: 0.3;
-}
-
-.stars3 {
-    background-image: radial-gradient(1px 1px at 90px 40px, #777, transparent);
-    animation-duration: 200s;
-    opacity: 0.2;
-}
+.stars { animation-duration: 120s; opacity: 0.4; }
+.stars2 { animation-duration: 180s; opacity: 0.3; }
+.stars3 { animation-duration: 240s; opacity: 0.2; }
 
 @keyframes moveStars {
     from { transform: translateY(0); }
     to { transform: translateY(-2000px); }
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header {
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background: rgba(5, 5, 16, 0.6);
     backdrop-filter: blur(10px);
+    background: rgba(5,5,16,0.6);
     z-index: 100;
-}
-
-.logo {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ffffff;
 }
 
 .nav a {
     margin-left: 30px;
-    text-decoration: none;
     color: #cbd5f5;
-    font-size: 0.95rem;
+    text-decoration: none;
     position: relative;
-    transition: color 0.3s ease;
 }
 
 .nav a::after {
     content: "";
-    position: absolute;
-    width: 0%;
+    width: 0;
     height: 2px;
-    background: #7c3aed;
-    left: 0;
+    background: #8b5cf6;
+    position: absolute;
     bottom: -6px;
-    transition: width 0.3s ease;
-}
-
-.nav a:hover {
-    color: #ffffff;
+    left: 0;
+    transition: 0.3s;
 }
 
 .nav a:hover::after {
     width: 100%;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
-}
-
-.hero-content {
-    animation: fadeUp 1.2s ease forwards;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 15px;
 }
 
 .hero h1 span {
     color: #8b5cf6;
 }
 
-.hero p {
-    max-width: 600px;
-    margin: auto;
-    font-size: 1.1rem;
-    color: #cbd5f5;
-}
-
-/* ===== BUTTONS ===== */
-.hero-buttons {
-    margin-top: 30px;
-}
-
+/* BUTTONS */
 .btn {
-    padding: 12px 28px;
+    padding: 12px 30px;
     border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 10px;
+    margin: 10px;
     display: inline-block;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .primary {
     background: #7c3aed;
-    color: #ffffff;
-}
-
-.primary:hover {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+    color: #fff;
 }
 
 .outline {
     border: 1px solid #7c3aed;
-    color: #ffffff;
+    color: #fff;
 }
 
-.outline:hover {
-    background: #7c3aed;
-    transform: translateY(-4px) scale(1.03);
+.btn:hover {
+    transform: translateY(-4px);
 }
 
-/* ===== SCROLL INDICATOR ===== */
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
+/* SECTIONS */
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-.scroll-indicator span {
-    display: block;
-    width: 24px;
-    height: 40px;
-    border: 2px solid #cbd5f5;
-    border-radius: 20px;
-    position: relative;
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.scroll-indicator span::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: #cbd5f5;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    animation: scrollDown 2s infinite;
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-@keyframes scrollDown {
-    0% { opacity: 0; transform: translate(-50%, 0); }
-    50% { opacity: 1; }
-    100% { opacity: 0; transform: translate(-50%, 15px); }
+.card {
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
-/* ===== HERO ANIMATION ===== */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(139,92,246,0.25);
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
 }
