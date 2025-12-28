@@ -2,13 +2,10 @@ const toggle = document.getElementById("themeToggle");
 const icon = toggle.querySelector("i");
 const body = document.body;
 
-// Correct icon logic
 function updateIcon() {
-  if (body.classList.contains("dark")) {
-    icon.className = "fas fa-sun";
-  } else {
-    icon.className = "fas fa-moon";
-  }
+  icon.className = body.classList.contains("dark")
+    ? "fas fa-sun"
+    : "fas fa-moon";
 }
 
 toggle.addEventListener("click", () => {
@@ -18,7 +15,7 @@ toggle.addEventListener("click", () => {
 
 updateIcon();
 
-// Scroll reveal
+/* Reveal on scroll */
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(entries => {
