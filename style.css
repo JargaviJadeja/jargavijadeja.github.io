@@ -684,6 +684,121 @@ body.dark .skill-item {
     }
 }
 
+```css
+/* ===== My Book Section ===== */
+
+.book-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 42px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.22);
+    border-radius: 22px;
+    background: rgba(128, 128, 128, 0.06);
+}
+
+.book-cover {
+    flex: 0 0 260px;
+    max-width: 260px;
+}
+
+.book-cover-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.book-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.book-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #7c5ce0;
+    margin-bottom: 12px;
+}
+
+.book-info h3 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 0 0 10px;
+}
+
+.book-info h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0 0 14px;
+}
+
+.book-author {
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.book-info > p {
+    line-height: 1.8;
+}
+
+.book-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.book-topics span {
+    padding: 7px 12px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 20px;
+    font-size: 0.82rem;
+}
+
+.book-quote {
+    margin: 20px 0;
+    padding-left: 16px;
+    border-left: 3px solid #7c5ce0;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.book-status {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .book-container {
+        flex-direction: column;
+        gap: 28px;
+        padding: 22px;
+        text-align: center;
+    }
+
+    .book-cover {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .book-topics {
+        justify-content: center;
+    }
+
+    .book-quote {
+        text-align: left;
+    }
+}
+```
+
 
 
 
